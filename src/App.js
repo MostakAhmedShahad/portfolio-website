@@ -1,26 +1,44 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 import Home from './components/Home';
 import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import './App.css';
-import './assets/styles/App.scss';
+import './App.scss';
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-      <Footer />
-    </Router>
+    <div className="app">
+      {/* Navigation Bar */}
+      <nav className="navbar">
+        <Link smooth to="#home" className="nav-link">
+          Home
+        </Link>
+        <Link smooth to="#about" className="nav-link">
+          About
+        </Link>
+        <Link smooth to="#projects" className="nav-link">
+          Projects
+        </Link>
+        <Link smooth to="#contact" className="nav-link">
+          Contact
+        </Link>
+      </nav>
+
+      {/* Sections */}
+      <section id="home">
+        <Home />
+      </section>
+      <section id="about">
+        <About />
+      </section>
+      <section id="projects">
+        <Projects />
+      </section>
+      <section id="contact">
+        <Contact />
+      </section>
+    </div>
   );
 }
 

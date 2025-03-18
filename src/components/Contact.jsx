@@ -2,11 +2,17 @@ import React from 'react';
 
 const Contact = () => {
   return (
-    <div>
+    <div className="contact-section">
       <h1>Contact Me</h1>
-      <p>This is the contact page.</p>
+      <p>Feel free to reach out to me for collaborations or inquiries!</p>
+      <form>
+        <input type="text" placeholder="Your Name" />
+        <input type="email" placeholder="Your Email" />
+        <textarea placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
     </div>
   );
 };
 
-export default Contact; 
+export default Contact;

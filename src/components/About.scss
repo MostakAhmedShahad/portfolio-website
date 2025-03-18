@@ -10,8 +10,7 @@
   
   .about-content {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     max-width: 1200px;
     width: 100%;
     background: white;
@@ -22,11 +21,11 @@
   }
   
   .profile-image {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    border-radius: 15px;
     overflow: hidden;
-    margin-bottom: 2rem;
+    margin-right: 3rem;
     border: 5px solid #007bff;
     transition: transform 0.5s ease, box-shadow 0.5s ease;
   
@@ -37,19 +36,29 @@
     }
   
     &:hover {
-      transform: scale(1.1);
+      transform: scale(1.05);
       box-shadow: 0 10px 20px rgba(0, 123, 255, 0.3);
     }
   }
   
-  .about-text {
-    text-align: center;
+  .cards-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
   
-    h1 {
-      font-size: 2.5rem;
+  .card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+  
+    h2 {
+      font-size: 1.75rem;
       margin-bottom: 1.5rem;
       color: #333;
-      animation: slideIn 1s ease-in-out;
     }
   
     p {
@@ -57,7 +66,30 @@
       line-height: 1.8;
       color: #555;
       margin-bottom: 1.5rem;
-      animation: fadeIn 2s ease-in-out;
+    }
+  
+    .intro-text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+  
+      .large-text {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #007bff;
+      }
+  
+      .small-text {
+        font-size: 1.25rem;
+        color: #555;
+      }
+  
+      .highlight-text {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #ff5722;
+      }
     }
   
     ul {
@@ -65,10 +97,7 @@
       padding: 0;
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
       gap: 1rem;
-      margin-bottom: 2rem;
-      animation: slideIn 1.5s ease-in-out;
   
       li {
         background: #007bff;
@@ -84,6 +113,46 @@
         }
       }
     }
+  
+    .contact-button {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.3s ease;
+  
+      &:hover {
+        background: #0056b3;
+        transform: translateY(-5px);
+      }
+    }
+  
+    .advertisement-text {
+      p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #555;
+        margin-bottom: 1rem;
+        padding: 0.5rem;
+        background: #f9f9f9;
+        border-radius: 10px;
+        border-left: 5px solid #007bff;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+        &:hover {
+          transform: translateX(10px);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+  
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
   }
   
   // Animations
@@ -96,41 +165,65 @@
     }
   }
   
-  @keyframes slideIn {
-    from {
-      transform: translateY(50px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  
   // Responsive Design
   @media (max-width: 768px) {
     .about-content {
+      flex-direction: column;
+      align-items: center;
       padding: 2rem;
     }
   
     .profile-image {
-      width: 150px;
-      height: 150px;
+      width: 200px;
+      height: 200px;
+      margin-right: 0;
+      margin-bottom: 2rem;
     }
   
-    .about-text {
-      h1 {
-        font-size: 2rem;
+    .cards-container {
+      width: 100%;
+    }
+  
+    .card {
+      padding: 1.5rem;
+  
+      h2 {
+        font-size: 1.5rem;
       }
   
       p {
         font-size: 1rem;
       }
   
+      .intro-text {
+        .large-text {
+          font-size: 1.75rem;
+        }
+  
+        .small-text {
+          font-size: 1.1rem;
+        }
+  
+        .highlight-text {
+          font-size: 1.25rem;
+        }
+      }
+  
       ul {
         li {
           font-size: 0.9rem;
           padding: 0.5rem 1rem;
+        }
+      }
+  
+      .contact-button {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+      }
+  
+      .advertisement-text {
+        p {
+          font-size: 1rem;
         }
       }
     }
