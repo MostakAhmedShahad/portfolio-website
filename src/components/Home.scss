@@ -69,7 +69,9 @@
     color: #555;
     line-height: 1.8;
     margin-bottom: 2rem;
-    animation: fadeIn 1.5s ease-in-out;
+    animation: moveText 5s infinite alternate ease-in-out; // Moving text effect
+    font-family: 'Georgia', serif; // Aesthetic font
+    font-style: italic; // Italic for a premium look
   }
 
   .home-buttons {
@@ -112,7 +114,6 @@
   from {
     opacity: 0;
   }
-
   to {
     opacity: 1;
   }
@@ -123,10 +124,18 @@
     transform: translateY(50px);
     opacity: 0;
   }
-
   to {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(10px); // Slight movement for aesthetic effect
   }
 }
 
