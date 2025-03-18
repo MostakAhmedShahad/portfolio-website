@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom'; // For navigation
-import profileImage from '../assets/images/300062377_3027170894246641_1167568765499689940_n.jpg'; // Adjust the image path
+import profileImage from '../assets/images/sabri-tuzcu-wunVFNvqhfE-unsplash.jpg'; // Adjust the image path
 import './About.scss'; // Import the SCSS file for styling
 
 const About = () => {
@@ -24,9 +24,7 @@ const About = () => {
           <div className="card education-card">
             <h2>Educational Background</h2>
             <p className="intro-text">
-              <span className="large-text">Hey, I am Mostak!</span>
-              <span className="small-text">A passionate and creative</span>
-              <span className="highlight-text">Software Engineer</span>
+               
             </p>
             <p>
               I graduated from <strong>Rajshahi University of Engineering and Technology (RUET)</strong> with a degree in <strong>Computer Science and Engineering (CSE)</strong>.
