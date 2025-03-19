@@ -18,9 +18,9 @@ const Home = () => {
         setTimeout(() => {
           setText('\u00A0'); // Reset to a non-breaking space
           currentIndex = 0;
-        }, 500); // Shorter delay before restarting
+        }, 70); // Shorter delay before restarting
       }
-    }, 50); // Faster typing speed (50ms per letter)
+    }, 100); // Faster typing speed (50ms per letter)
 
     return () => clearInterval(interval);
   }, []);
@@ -47,7 +47,9 @@ const Home = () => {
           <h1>Mostak Ahmed</h1> {/* Name without gradient or shake effect */}
           <h2>I build things for mobile.</h2>
           <p>
-            I’m a software developer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building accessible, human-centered mobile applications.
+            <strong>I’m a software developer</strong> specializing in building
+            <strong>exceptional digital experiences</strong>. Currently, I’m focused on
+            building <strong>accessible, human-centered mobile applications</strong>.
           </p>
 
           <div className="home-buttons">
