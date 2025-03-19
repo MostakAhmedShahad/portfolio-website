@@ -13,30 +13,55 @@ const About = () => {
   return (
     <div className="about-container">
       <div className="about-content">
-        {/* Profile Image on the Left */}
-        <div className="profile-image">
-          <img src={profileImage} alt="Mostak Ahmed" />
-        </div>
-
-        {/* Cards for Education, Skills, and Advertisement */}
-        <div className="cards-container">
-          {/* Education Card */}
-          <div className="card education-card">
-            <h2>Educational Background</h2>
-            <p className="intro-text">
-               
-            </p>
-            <p>
-              I graduated from <strong>Rajshahi University of Engineering and Technology (RUET)</strong> with a degree in <strong>Computer Science and Engineering (CSE)</strong>.
-            </p>
+        {/* Left Section: Profile Image and Additional Content */}
+        <div className="left-section">
+          <div className="profile-image">
+            <img src={profileImage} alt="Mostak Ahmed" />
+          </div>
+          <div className="card">
+            <h2>Quick Facts</h2>
+            <ul>
+              <li>🎓 Graduated from RUET, CSE</li>
+              <li>📱 Flutter Developer</li>
+              <li>💻 Passionate about Mobile Apps</li>
+              <li>🌍 Building Global Solutions</li>
+            </ul>
             <button className="contact-button" onClick={handleContactClick}>
               Contact Me
             </button>
           </div>
+        </div>
+
+        {/* Right Section: Mission, Vision, Skills, and Advertisement */}
+        <div className="right-section">
+          {/* Mission & Vision Card */}
+          <div className="card mission-vision-card">
+            <h2>Mission & Vision</h2>
+            <ul>
+              <li>
+                <strong>Mission:</strong>
+                <ul>
+                  <li>Build high-performance Flutter apps.</li>
+                  <li>Deliver seamless user experiences.</li>
+                  <li>Focus on accessibility and scalability.</li>
+                  <li>Innovate with cutting-edge technologies.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Vision:</strong>
+                <ul>
+                  <li>Lead in Flutter app development.</li>
+                  <li>Create apps that inspire and empower.</li>
+                  <li>Push the boundaries of mobile technology.</li>
+                  <li>Build a global impact through innovation.</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
 
           {/* Skills Card */}
           <div className="card skills-card">
-            
+            <h2>Skills</h2>
             <ul>
               <li>Dart</li>
               <li>Flutter</li>
@@ -49,7 +74,6 @@ const About = () => {
 
           {/* Advertisement Card */}
           <div className="card advertisement-card">
-            
             <div className="advertisement-text">
               <p>🚀✨ "Building Smooth, Scalable & Stunning Flutter Apps! 🚀📱"</p>
               <p>💡🎨 "Crafting Beautiful Mobile Experiences with Flutter, One Pixel at a Time! 🎯📲"</p>
