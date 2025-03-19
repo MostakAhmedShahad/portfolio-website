@@ -1,8 +1,34 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import profileImage from '../assets/images/300062377_3027170894246641_1167568765499689940_n.jpg'; // Adjust the image path
 import './Home.scss';
 
 const Home = () => {
+  const [text, setText] = useState('');
+  const fullText = "Hi, my name is";
+
+  // Text animation for "Hi, my name is"
+  useEffect(() => {
+    let currentIndex = 0;
+    const interval = setInterval(() => {
+      if (currentIndex <= fullText.length) {
+        setText(fullText.slice(0, currentIndex));
+        currentIndex++;
+      } else {
+        clearInterval(interval);
+      }
+    }, 100); // Adjust speed of typing effect
+
+    return () => clearInterval(interval);
+  }, []);
+
+  // Scroll to Contact section
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="home-section">
       <div className="home-content">
@@ -13,7 +39,7 @@ const Home = () => {
 
         {/* Right Side: Text Content */}
         <div className="home-text">
-          <h3>Hi, my name is</h3>
+          <h3>{text}</h3> {/* Typing effect for "Hi, my name is" */}
           <h1>Mostak Ahmed</h1>
           <h2>I build things for mobile.</h2>
           <p>
@@ -21,7 +47,8 @@ const Home = () => {
           </p>
 
           <div className="home-buttons">
-            <button className="check-course">Check out my course!</button>
+            <button className="hire-me" onClick={scrollToContact}>Hire Me</button>
+            <button className="lets-talk" onClick={scrollToContact}>Let’s Talk</button>
           </div>
         </div>
       </div>
