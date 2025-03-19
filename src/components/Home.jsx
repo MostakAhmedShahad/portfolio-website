@@ -6,7 +6,7 @@ const Home = () => {
   const [text, setText] = useState('');
   const fullText = "Hi, my name is";
 
-  // Text animation for "Hi, my name is"
+  // Text animation for "Hi, my name is" (looping typing effect)
   useEffect(() => {
     let currentIndex = 0;
     const interval = setInterval(() => {
@@ -14,7 +14,11 @@ const Home = () => {
         setText(fullText.slice(0, currentIndex));
         currentIndex++;
       } else {
-        clearInterval(interval);
+        // Reset after a short delay
+        setTimeout(() => {
+          setText('');
+          currentIndex = 0;
+        }, 1000); // Delay before restarting
       }
     }, 100); // Adjust speed of typing effect
 
@@ -40,7 +44,7 @@ const Home = () => {
         {/* Right Side: Text Content */}
         <div className="home-text">
           <h3>{text}</h3> {/* Typing effect for "Hi, my name is" */}
-          <h1>Mostak Ahmed</h1>
+          <h1 className="name">Mostak Ahmed</h1> {/* Premium color and shake effect */}
           <h2>I build things for mobile.</h2>
           <p>
             I’m a software developer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building accessible, human-centered mobile applications.

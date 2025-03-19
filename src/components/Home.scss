@@ -60,12 +60,15 @@
     animation: fadeIn 1s ease-in-out;
   }
 
-  h1 {
+  h1.name {
     font-size: 3.5rem; // Large font for the name
-    color: #333;
     margin-bottom: 0.5rem;
     font-family: 'Georgia', serif; // Premium font
-    animation: slideIn 1s ease-in-out;
+    background: linear-gradient(45deg, #007bff, #ff5722, #28a745, #007bff); // Gradient color
+    background-size: 400% 400%; // For gradient animation
+    -webkit-background-clip: text; // Clip text to gradient
+    -webkit-text-fill-color: transparent; // Transparent text
+    animation: gradientShift 5s infinite, shake 0.5s infinite alternate; // Gradient and shake animation
   }
 
   h2 {
@@ -140,6 +143,27 @@
   }
 }
 
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(-2px);
+  }
+  100% {
+    transform: translateX(2px);
+  }
+}
+
 // Responsive Design
 @media (max-width: 768px) {
   .home-content {
@@ -153,7 +177,7 @@
   }
 
   .home-text {
-    h1 {
+    h1.name {
       font-size: 2.5rem; // Adjust font size for smaller screens
     }
 
