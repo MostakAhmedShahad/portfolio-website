@@ -49,29 +49,38 @@
 .home-text {
   flex: 1;
   padding: 1rem;
+  text-align: left; // Align text to the left
+
+  h3 {
+    font-size: 1.25rem;
+    color: #007bff; // Blue color for "Hi, my name is"
+    margin-bottom: 0.5rem;
+    font-family: 'Arial', sans-serif; // Simple font
+    animation: fadeIn 1s ease-in-out;
+  }
 
   h1 {
-    font-size: 2.5rem;
+    font-size: 3.5rem; // Large font for the name
     color: #333;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Georgia', serif; // Premium font
     animation: slideIn 1s ease-in-out;
   }
 
   h2 {
-    font-size: 1.75rem;
-    color: #007bff;
+    font-size: 2.5rem; // Large font for "I build things for mobile"
+    color: #555;
     margin-bottom: 1.5rem;
+    font-family: 'Georgia', serif; // Premium font
     animation: slideIn 1.2s ease-in-out;
   }
 
   p {
-    font-size: 1.1rem;
-    color: #555;
+    font-size: 1rem; // Smaller font for the description
+    color: #777;
     line-height: 1.8;
     margin-bottom: 2rem;
-    animation: moveText 5s infinite alternate ease-in-out; // Moving text effect
-    font-family: 'Georgia', serif; // Aesthetic font
-    font-style: italic; // Italic for a premium look
+    animation: fadeIn 1.5s ease-in-out;
   }
 
   .home-buttons {
@@ -86,22 +95,12 @@
       cursor: pointer;
       transition: background 0.3s ease, transform 0.3s ease;
 
-      &.hire-me {
-        background: #007bff;
+      &.check-course {
+        background: #28a745; // Green background
         color: white;
 
         &:hover {
-          background: #0056b3;
-          transform: translateY(-5px);
-        }
-      }
-
-      &.lets-talk {
-        background: #ff5722;
-        color: white;
-
-        &:hover {
-          background: #e64a19;
+          background: #218838; // Darker green on hover
           transform: translateY(-5px);
         }
       }
@@ -130,15 +129,6 @@
   }
 }
 
-@keyframes moveText {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(10px); // Slight movement for aesthetic effect
-  }
-}
-
 // Responsive Design
 @media (max-width: 768px) {
   .home-content {
@@ -153,15 +143,15 @@
 
   .home-text {
     h1 {
-      font-size: 2rem;
+      font-size: 2.5rem; // Adjust font size for smaller screens
     }
 
     h2 {
-      font-size: 1.5rem;
+      font-size: 2rem; // Adjust font size for smaller screens
     }
 
     p {
-      font-size: 1rem;
+      font-size: 0.9rem; // Adjust font size for smaller screens
     }
 
     .home-buttons {

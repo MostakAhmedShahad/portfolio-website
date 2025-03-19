@@ -6,24 +6,22 @@ const Home = () => {
   return (
     <div className="home-section">
       <div className="home-content">
-         
+        {/* Left Side: Image */}
         <div className="home-image">
           <img src={profileImage} alt="Mostak Ahmed" />
         </div>
 
         {/* Right Side: Text Content */}
         <div className="home-text">
-          <h1>HI, I’m Mostak Ahmed</h1>
-          <h2>Flutter App Developer</h2>
+          <h3>Hi, my name is</h3>
+          <h1>Mostak Ahmed</h1>
+          <h2>I build things for mobile.</h2>
           <p>
-          A passionate app developer is driven by a love for coding and creating innovative mobile solutions.
-           Constantly learn new technologies and strive to build user-friendly, impactful apps.
-            Development is not just a job, but a way to turn ideas into reality.
+            I’m a software developer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building accessible, human-centered mobile applications.
           </p>
 
           <div className="home-buttons">
-            <button className="hire-me">Hire Me</button>
-            <button className="lets-talk">Let’s Talk</button>
+            <button className="check-course">Check out my course!</button>
           </div>
         </div>
       </div>

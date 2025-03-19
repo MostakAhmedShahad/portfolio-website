@@ -10,7 +10,7 @@ const Projects = () => {
   return (
     <div className="projects-section">
       <h1>My Projects</h1>
-      <p>Here are some of the projects I've worked on:</p>
+       
 
       {/* Project 1: Let's Chat App */}
       <div className="project-card">
