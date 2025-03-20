@@ -2,16 +2,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 4rem 2rem;
+  padding: .1rem .1rem;
   background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
   min-height: 100vh;
   overflow: hidden;
-}
+}  
 
 .about-content {
   display: flex;
   align-items: flex-start;
-  max-width: 1200px;
+  max-width: 1500px;
   width: 100%;
   background: white;
   padding: 3rem;
@@ -21,7 +21,7 @@
 }
 
 .left-section {
-  width: 30%; // Use 30% of the space for the left side
+  width: 28%; // Use 30% of the space for the left side
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -48,10 +48,19 @@
 }
 
 .right-section {
-  width: 70%; // Use 70% of the space for the right side
+  width: 68%; // Use 70% of the space for the right side
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+
+.space-between{
+  width: 4%; // Use 70% of the space for the right side
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+
 }
 
 .cards-container {

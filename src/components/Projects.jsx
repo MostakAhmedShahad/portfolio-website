@@ -40,6 +40,7 @@ const Projects = () => {
           </a>
         </div>
       </div>
+      
 
       {/* Add more projects here if needed */}
     </div>

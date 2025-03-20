@@ -31,6 +31,9 @@ const About = () => {
             </button>
           </div>
         </div>
+        <div className='space-between'>
+
+        </div>
 
         {/* Right Section: Mission, Vision, Skills, and Advertisement */}
         <div className="right-section">
