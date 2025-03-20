@@ -45,7 +45,7 @@ const Home = () => {
         <div className="home-text">
           <h3>{text}</h3> {/* Typing effect for "Hi, my name is" */}
           <h1>Mostak Ahmed</h1> {/* Name without gradient or shake effect */}
-          <h2>I build things for mobile.</h2>
+          <h2>I build things for Mobile App</h2>
           <p>
             <strong>I’m a software developer</strong> specializing in building
             <strong>exceptional digital experiences</strong>. Currently, I’m focused on
