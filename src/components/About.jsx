@@ -1,13 +1,14 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom'; // For navigation
-import profileImage from '../assets/images/sabri-tuzcu-wunVFNvqhfE-unsplash.jpg'; // Adjust the image path
-import './About.scss'; // Import the SCSS file for styling
+import { useNavigate } from 'react-router-dom';
+import profileImage from '../assets/images/sabri-tuzcu-wunVFNvqhfE-unsplash.jpg';
+import './About.scss';
+import { FaBullseye, FaEye, FaHeart } from 'react-icons/fa'; // Import icons
 
 const About = () => {
-  const navigate = useNavigate(); // Hook for navigation
+  const navigate = useNavigate();
 
   const handleContactClick = () => {
-    navigate('/contact'); // Navigate to the Contact page
+    navigate('/contact');
   };
 
   return (
@@ -31,35 +32,46 @@ const About = () => {
             </button>
           </div>
         </div>
-        <div className='space-between'>
-
-        </div>
+        <div className="space-between"></div>
 
         {/* Right Section: Mission, Vision, Skills, and Advertisement */}
         <div className="right-section">
           {/* Mission & Vision Card */}
           <div className="card mission-vision-card">
             <h2>Mission & Vision</h2>
-            <ul>
-              <li>
-                <strong>Mission:</strong>
-                <ul>
-                  <li>Build high-performance Flutter apps.</li>
-                  <li>Deliver seamless user experiences.</li>
-                  <li>Focus on accessibility and scalability.</li>
-                  <li>Innovate with cutting-edge technologies.</li>
-                </ul>
-              </li>
-              <li>
-                <strong>Vision:</strong>
-                <ul>
-                  <li>Lead in Flutter app development.</li>
-                  <li>Create apps that inspire and empower.</li>
-                  <li>Push the boundaries of mobile technology.</li>
-                  <li>Build a global impact through innovation.</li>
-                </ul>
-              </li>
-            </ul>
+            <div className="mission-vision-grid">
+              <div className="mission">
+                <h3>
+                  <FaBullseye className="icon" /> Mission
+                </h3>
+                <p>
+                  My mission is to build <strong>high-performance Flutter apps</strong> that deliver{' '}
+                  <strong>seamless user experiences</strong>. I focus on creating solutions that are{' '}
+                  <strong>accessible</strong> and <strong>scalable</strong>, while innovating with{' '}
+                  <strong>cutting-edge technologies</strong> to push the boundaries of what’s possible.
+                </p>
+              </div>
+              <div className="vision">
+                <h3>
+                  <FaEye className="icon" /> Vision
+                </h3>
+                <p>
+                  My vision is to lead in the field of <strong>Flutter app development</strong>, creating apps that{' '}
+                  <strong>inspire</strong> and <strong>empower</strong> users worldwide. I aim to push the boundaries of{' '}
+                  <strong>mobile technology</strong> and build a <strong>global impact</strong> through innovation and
+                  creativity.
+                </p>
+              </div>
+              <div className="values">
+                <h3>
+                  <FaHeart className="icon" /> Values
+                </h3>
+                <p>
+                  I value <strong>innovation</strong>, <strong>quality</strong>, and <strong>user-centric design</strong>. My goal is to create apps that are not only functional but also{' '}
+                  <strong>beautiful</strong> and <strong>impactful</strong>.
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Skills Card */}
