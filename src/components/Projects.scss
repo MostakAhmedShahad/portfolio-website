@@ -37,19 +37,17 @@
 
     .project-content {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1.5rem;
+      gap: 2rem;
+      margin-bottom: 1.5rem;
 
-      .project-details-card {
+      /* Left Side: Description */
+      .project-details {
+        flex: 1;
         background: linear-gradient(135deg, #ffffff, #f9f9f9);
         padding: 1.5rem;
         border-radius: 15px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        width: 100%;
-        max-width: 800px;
-        text-align: center;
 
         &:hover {
           transform: translateY(-5px);
@@ -60,15 +58,15 @@
           font-size: 1.1rem;
           color: #555;
           line-height: 1.6;
-          margin-bottom: 0;
         }
       }
 
+      /* Right Side: Images */
       .project-images {
+        flex: 1;
         display: flex;
         justify-content: space-between;
         gap: 1rem;
-        width: 100%;
 
         img {
           width: 23%;
@@ -81,44 +79,44 @@
           }
         }
       }
+    }
 
-      .project-links {
+    /* Centered Buttons */
+    .project-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+
+      a {
         display: flex;
-        justify-content: center;
-        gap: 1.5rem;
-        width: 100%;
+        align-items: center;
+        padding: 0.75rem 1.5rem;
+        border-radius: 25px;
+        font-size: 1rem;
+        text-decoration: none;
+        transition: background 0.3s ease, transform 0.3s ease;
 
-        a {
-          display: flex;
-          align-items: center;
-          padding: 0.75rem 1.5rem;
-          border-radius: 25px;
-          font-size: 1rem;
-          text-decoration: none;
-          transition: background 0.3s ease, transform 0.3s ease;
+        .icon {
+          margin-right: 0.5rem;
+        }
 
-          .icon {
-            margin-right: 0.5rem;
+        &.app-link {
+          background: linear-gradient(135deg, #007bff, #0056b3);
+          color: white;
+
+          &:hover {
+            background: linear-gradient(135deg, #0056b3, #003d80);
+            transform: translateY(-5px);
           }
+        }
 
-          &.app-link {
-            background: linear-gradient(135deg, #007bff, #0056b3);
-            color: white;
+        &.github-link {
+          background: linear-gradient(135deg, #333, #222);
+          color: white;
 
-            &:hover {
-              background: linear-gradient(135deg, #0056b3, #003d80);
-              transform: translateY(-5px);
-            }
-          }
-
-          &.github-link {
-            background: linear-gradient(135deg, #333, #222);
-            color: white;
-
-            &:hover {
-              background: linear-gradient(135deg, #222, #111);
-              transform: translateY(-5px);
-            }
+          &:hover {
+            background: linear-gradient(135deg, #222, #111);
+            transform: translateY(-5px);
           }
         }
       }
@@ -153,6 +151,8 @@
       }
 
       .project-content {
+        flex-direction: column;
+
         .project-images {
           flex-wrap: wrap;
           gap: 0.5rem;
@@ -161,15 +161,15 @@
             width: 48%;
           }
         }
+      }
 
-        .project-links {
-          flex-direction: column;
-          align-items: center;
+      .project-links {
+        flex-direction: column;
+        align-items: center;
 
-          a {
-            width: 100%;
-            text-align: center;
-          }
+        a {
+          width: 100%;
+          text-align: center;
         }
       }
     }
