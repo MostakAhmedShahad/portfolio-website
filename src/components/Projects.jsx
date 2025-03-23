@@ -7,6 +7,10 @@ import project2Image1 from '../assets/images/project2-1.jpg'; // Adjust image pa
 import project2Image2 from '../assets/images/project2-2.jpg';
 import project2Image3 from '../assets/images/project2-3.jpg';
 import project2Image4 from '../assets/images/project2-4.jpg';
+import project3Image1 from '../assets/images/project3-1.jpg'; // Adjust image paths
+import project3Image2 from '../assets/images/project3-2.jpg';
+import project3Image3 from '../assets/images/project3-3.jpg';
+import project3Image4 from '../assets/images/project3-4.jpg';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'; // Import icons
 import './Projects.scss';
 
@@ -80,6 +84,49 @@ const Projects = () => {
         <div className="project-links">
           <a
             href="https://github.com/MostakAhmedShahad/News_App"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="github-link"
+          >
+            <FaGithub className="icon" /> GitHub Repository
+          </a>
+        </div>
+      </div>
+
+      <div className="project-card">
+        <h2>CRUD App</h2>
+        <div className="project-content">
+          {/* Left Side: Description */}
+          <div className="project-details">
+            <p>
+              <strong>Description:</strong> Develop a CRUD application that interacts with a database via an API,
+               enabling users to create, read, update, and delete products. The app will send HTTP requests to the server, 
+               allowing seamless data management. Users can add new products, modify existing ones, retrieve product details,
+               and remove them from the database, ensuring real-time updates and efficient backend communication.
+            </p>
+          </div>
+
+          {/* Right Side: Images */}
+          <div className="project-images">
+            <img src={project3Image1} alt="Let's Chat App Screenshot 1" />
+            <img src={project3Image2} alt="Let's Chat App Screenshot 2" />
+            <img src={project3Image3} alt="Let's Chat App Screenshot 3" />
+            <img src={project3Image4} alt="Let's Chat App Screenshot 4" />
+          </div>
+        </div>
+
+        {/* Centered Buttons */}
+        <div className="project-links">
+          <a
+            href="https://sparkly-puppy-82e9ff.netlify.app/"  
+            target="_blank"
+            rel="noopener noreferrer"
+            className="app-link"
+          >
+            <FaExternalLinkAlt className="icon" /> Visit App
+          </a>
+          <a
+            href="https://github.com/MostakAhmedShahad/CRUD-from-API.git" // Replace with your GitHub URL
             target="_blank"
             rel="noopener noreferrer"
             className="github-link"
