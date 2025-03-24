@@ -48,7 +48,7 @@ const Home = () => {
           <h2>I build things for Mobile App</h2>
           <p>
             <strong>I’m a software developer</strong> specializing in building
-            <strong>exceptional digital experiences</strong>. Currently, I’m focused on
+            <strong> exceptional digital experiences</strong>. Currently, I’m focused on
             building <strong>accessible, human-centered mobile applications</strong>.
           </p>
 
